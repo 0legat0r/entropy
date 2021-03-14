@@ -147,7 +147,7 @@ class Aplct(QtWidgets.QMainWindow, Ui_MainWindow):
             edges_numerated = [(p[x[0]], p[x[1]]) for x in edges]
 
             G1.add_edges_from(edges_numerated)
-            self.infoNetwork.setText(' '.join(list(map(str, G1.nodes()))))
+            #self.infoNetwork.setText(' '.join(list(map(str, G1.nodes()))))
             S1 = entropy_S(G1)
             lat = sym.latex(S1)
             plt.clf()
@@ -187,8 +187,7 @@ class Aplct(QtWidgets.QMainWindow, Ui_MainWindow):
             plt.close()
         # nx.draw(G2)
         except Exception:
-            kk = 0
-            #self.infoNetwork.setText("Неверный формат данных!")
+            self.infoNetwork.setText("Неверный формат данных!")
 
 if __name__ == '__main__':
     
