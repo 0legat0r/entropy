@@ -107,6 +107,7 @@ class Aplct(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def visualizeNet(self):
         global G
+        plt.close()
         plt.figure(figsize=(10, 10))
         plt.clf()
         nx.draw(G, with_labels = True)
